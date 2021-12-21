@@ -1,38 +1,124 @@
 .App {
-  text-align: center;
+  background-color: rgb(78, 73, 73);
+  overflow: hidden;
+  position: relative;
+  font-family: monospace;
+  background-color: black;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.body {
+  position: relative;
+  margin-top: 2rem;
+  margin-bottom: -1em;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+}
+.background {
+  opacity: 0.4;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  position: fixed;
+ }
+ .apie-block {
+  position: relative;
+  color: black;
+  font-size: 14px;
+}
+.apie-block .info {
+  position: absolute;
+  top: 180px;
+  left: 110px;
+  text-align: left;
+}
+.apie-block .kontaktai {
+  position: absolute;
+  top: 180px;
+  right: 100px;
+  text-align: right;
+}
+.grid-container-paslaugos {
+  display: grid;
+  grid-template-columns: repeat(5, 25em);
+  grid-template-rows: repeat(5, 16em);
+  grid-gap: 15px;
+  justify-content: center;
+}
+.grid-item-paslaugos {
+  color:white;
+  background-color: rgba(0, 0, 0, 0.733);
+  position: relative;
+}
+.grid-item-paslaugos img{
+  opacity: 0.5;
+}
+.grid-item-paslaugos-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 16px;
+  font-weight: bold;
+}
+.grid-item-paslaugos-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  right: -40%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  display: none;
+}
+div.grid-item-paslaugos:hover {
+  background-color: black;
+}
+div.grid-item-paslaugos:hover img{
+  opacity: 0.3;
+}
+div.grid-item-paslaugos:hover .grid-item-paslaugos-text {
+  display: block;
+}
+div.grid-item-paslaugos:hover .grid-item-paslaugos-title {
+  display: none;
+}
+.logo-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  width: 18rem;
+  padding: 10px;
+  background-color: white;
+  font-size: 22px;
+  justify-items: center; /* adjusted */
+  justify-content: center;
+  border-radius: 30px;
+}
+.responsive-image {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+}
+.info-block {
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8rem;
+  width: 100%;
+}
+.info-block-text p{
+  font-size: 24px;
+  line-height: 1.5;
+  text-align: center;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.paslaugos-block {
+  height: 500px;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 8rem;
+  width: 100%;
+  padding-top: 120px;
+  text-align: center;
 }
