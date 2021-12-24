@@ -113,7 +113,12 @@ div.grid-item-paslaugos:hover .grid-item-paslaugos-title {
 @media only screen and (max-device-width: 1000px) {
   .btn-light {visibility: hidden;}
   .hide-on-resize {visibility: hidden;}
-  .logo-section {grid-template-columns: 100% 0;}
+  .logo-section {
+    grid-template-columns: 100% 0;
+    width: 70%;
+    height: 100%;
+    margin-bottom: 0;
+  }
   .apie-block .kontaktai { 
       font-size: 4vw;
       top: 18%;
@@ -125,14 +130,23 @@ div.grid-item-paslaugos:hover .grid-item-paslaugos-title {
   .apie-block {
     height: 120em;
   }
+  .info-block-text {
+    margin-top: -7em;
+    font-size: 2vw;
+    width: 95%;
+    margin-left: 2%;
+    margin-right: 2%;
+    height: 46em;
+    margin-bottom: -30em;
+  }
 }
-.responsive-image {
+.logo {
   width: 100%;
-  max-width: 6em;
+  max-width: 16em;
   height: auto;
 }
 .info-block {
-  height: 32em;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
   margin-top: 8rem;

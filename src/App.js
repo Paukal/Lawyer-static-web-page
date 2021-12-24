@@ -26,7 +26,7 @@ function App() {
         <img src={background} alt="background" className="background"/>
         <div className="body">        
           <div className="logo-section" onClick={refreshPage}>
-            <img src={logo} alt="logo" className="responsive-image"/>
+            <img src={logo} alt="logo" className="logo"/>
             <p className="logo-text hide-on-resize">
               <span style={{fontSize:"0.55em"}}>ADVOKATŲ KONTORA</span><br/> 
               KALVERŠ IR SVETICKAS
@@ -41,7 +41,7 @@ function App() {
                 ____________________________
               </p>
 
-              <p className="hide-on-resize" style={{marginTop:"7em"}}>
+              <p className="hide-on-resize" style={{marginTop:"7em", marginBottom:"-4em"}}>
                 Turite teisinių klausimų? <br/>
                 Turėdami virš <b>20 metų</b> patirties mes Jums atsakysime į<br/> rūpimus klausimus ir padėsime išspręsti teisines problemas.
               </p>
