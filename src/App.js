@@ -1,4 +1,5 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from './assets/logo.jpg';
 import background from "./assets/bckgr.jpg";
 import business from "./assets/business.jpg";
@@ -12,28 +13,37 @@ import debt from "./assets/debt.jpg";
 import suit from "./assets/suit.jpg";
 import services from "./assets/services.jpg";
 import lawbackground from "./assets/lawbckgr.jpg";
-//import Product from './Data';
+import { ButtonScroll } from './button';
 
 function App() {
+
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   return (
     <div className="App">
         <img src={background} alt="background" className="background"/>
-        <div className="body">
-          <div className="logo-section">
-            <img src={logo} alt="logo" height="100px" width="150px" className="responsive-image"/>
-            <p>Kalvers ir Svetickas</p>
+        <div className="body">        
+          <div className="logo-section" onClick={refreshPage}>
+            <img src={logo} alt="logo" className="responsive-image"/>
+            <p className="logo-text hide-on-resize">
+              <span style={{fontSize:"0.55em"}}>ADVOKATŲ KONTORA</span><br/> 
+              KALVERŠ IR SVETICKAS
+            </p>
           </div>
+          <ButtonScroll className="button"/>
           <div className="info-block">
             <div className="info-block-text">
-              <p style={{fontSize:38}}>
+              <p style={{fontSize:"2.25em", wordSpacing: "0.3em", fontWeight:"bold"}}>
                 ____________________________<br/><br/>  
-                Advokatai Raimondas Kalverš ir<br/> Jaunius Svetickas teikia teisinę pagalbą<br/> 
+                ADVOKATAI RAIMONDAS KALVERŠ IR <br/> JAUNIUS SVETICKAS TEIKIA <br/> TEISINES PASLAUGAS<br/> 
                 ____________________________
               </p>
-              <br/><br/>
-              <p >
+
+              <p className="hide-on-resize" style={{marginTop:"7em"}}>
                 Turite teisinių klausimų? <br/>
-                Turėdami daugiau nei 10 metų patirties mes jums atsakysime į<br/> rūpimus klausimus ir padėsime išspręsti teisines problemas.
+                Turėdami virš <b>20 metų</b> patirties mes Jums atsakysime į<br/> rūpimus klausimus ir padėsime išspręsti teisines problemas.
               </p>
             </div>
           </div>
@@ -43,12 +53,10 @@ function App() {
                 <img src={business} alt="business" className="business" height="100%" width= "100%" object-fit="contain"/>
                 <p className="grid-item-paslaugos-title">VERSLO ĮMONIŲ IR KOMERCINĖ TEISĖ</p>
                 <p className="grid-item-paslaugos-text">
-                  Tai viena iš pagrindinių kontoros veiklos sričių, apimanti platų teikiamų paslaugų, susijusių su verslo,
-                   komerciniais santykiais, įmonių veikla, spektrą. Konsultuojame visais versle, ūkinėje-komercinėje veikloje
-                    kylančiais teisiniais klausimais, rengiame būtinų teisinių dokumentų (sutarčių ir kt.) projektus, atliekame
+                Konsultuojame verslo, ūkinės-komercinės veiklos
+                    teisiniais klausimais, rengiame būtinų teisinių dokumentų (sutarčių ir kt.) projektus, atliekame
                      pateiktų dokumentų teisinį įvertinimą, prireikus atstovaujame teismuose ir kitose ginčų nagrinėjimo
-                      institucijose nagrinėjant kilusius ginčus tarp verslo kontrahentų ir patnerių, ar ginčuose su verslo
-                       priežiūrą vykdančiomis valstybės ir savivaldos institucijomis. Taip pat teikiame visas būtinas teisinės
+                      institucijose. Taip pat teikiame visas būtinas teisinės
                         paslaugas steigiant, įsigijant, jungiant, atidalijant, pertvarkant, ar likviduojant įmones, įsigyjant, ar
                          perleidžiant akcijas (įmonių kapitalo dalis, pajus), keičiant įmonės valdymo struktūrą, steigimo dokumentus,
                           buveinės vietą, pavadinimą, valdymo organus, ar atskirus jų narius.
@@ -70,9 +78,6 @@ function App() {
                 <p className="grid-item-paslaugos-title">STATYBŲ TEISĖ</p>
                 <p className="grid-item-paslaugos-text">
                   
-                  Statybų teisė – viena iš prioritetinių kontoros specializacijų. Esame sukaupę didelę patirtį teikiant platų
-                   teisinių paslaugų spektrą statytojams, rangovams, projektuotojams, statybos techninės priežiūros subjektams,
-                    pirkėjams tiek pačiame statybos procese, tiek nagrinėjant ginčus ir bylas, kylančias iš statybos teisinių santykių.
                      Konsultuojame visais būtinais pasirengimo statybai, projektavimo, statybos proceso, priežiūros, kokybės, atitikties,
                       garantijų, statinių naudojimo teisiniais klausimais, rengiame sutarčių ir kitų reikiamų teisinių dokumentų projektus,
                        pateikiame dokumentų teisinį įvertinimą, prireikus – atstovaujame ginčuose ir bylose, kylančiose iš statybos teisinių
@@ -116,9 +121,7 @@ function App() {
                 <p className="grid-item-paslaugos-text">
                   Konsultuojame sutuoktinių tarpusavio teisinių ir turtinių santykių, vaikų teisių apsaugos, išlaikymo,
                    įvaikinimo, globos ir rūpybos, santuokos nutraukimo, turto padalinimo bei visais kitais šeimos teisės
-                    klausimais, rengiame būtinų teisinių dokumentų (vedybų sutarties, sutuoktinių susitarimo dėl santuokos
-                     nutraukimo, pareiškimo teismui dėl santuokos nuraukimo vieno iš sutuoktinių prašymu, ieškinių dėl
-                      išlaikymo priteisimo, turto padalinimo ir kt.) projektus, pateikiame dokumentų teisinį įvertinimą,
+                    klausimais, rengiame būtinų teisinių dokumentų projektus, pateikiame dokumentų teisinį įvertinimą,
                        atstovaujame bylose, kylančiose iš šeimos teisinių bei turtinių santykių.
                 </p>
               </div>
@@ -129,11 +132,7 @@ function App() {
                   Konsultuojame skolų išieškojimo klausimais, kreditoriaus ir skolininko teisinių santykių, bendraisiais 
                   prievolinės teisės klausimais, pateikiame skolos išieškojimo teisinių galimybių įvertinimą, esant galimybei,
                   pasiūlome alternatyvius teisėtus būdus skolai išieškoti, surinkę informaciją iš viešų šaltinių
-                  pateikiame skolininko turtinės padėties įvertinimą*. Atstovaujame derybose, bylose ir kituose teisiniuose procesuose dėl skolų išieškojimo.
-
- 
-
-                  *ši paslauga teikiama tik sudarius rašytinę teisinių paslaugų sutartį.
+                  pateikiame skolininko turtinės padėties įvertinimą. Atstovaujame derybose, bylose ir kituose teisiniuose procesuose dėl skolų išieškojimo.
                 </p>
               </div>
               <div className="grid-item-paslaugos">
@@ -145,42 +144,28 @@ function App() {
 
                   Be to, susitarus, taip pat atstovaujame klientus administracinių teisės pažeidimų, baudžiamosiose bylose. Rengiame visus
                    būtinus bylinėjimosi procese procesinius dokumentus (ieškinius, priešieškinius, atsiliepimus, dublikus, triplikus, skundus,
-                    pareiškimus ir kt.) Šias teisines paslaugas teikiame visuose teismuose ir visose bylos nagrinėjimo instancijose: pirmos
-                     instancijos teismuose (apylinkių, apygardų teismuose, apygardų administraciniuose teismuose), apeliacinės instancijos
-                      teismuose (apygardų teismuose, Lietuvos apeliaciniame teisme, Lietuvos vyriausiame administraciniame teisme),
-                       Lietuvos Aukščiausiame Teisme (kasacinė bylos nagrinėjimo instancija).
-
-                  Teikiame teisines paslaugas ir rengiame būtinus dokumentus proceso atnaujinimo bylose procese, atstovaujame tokio pobūdžio bylose.
-
-                  Visada pirmiausiai stengiamės išsiaiškinti kliento poreikius ir tikslus bei atrasti ir pasiūlyti klientui alternatyvius, pigesnius
-                   bei greitesnius ginčų sprendimo būdus nei teisminis bylų nagrinėjimas. Be to, atsižvelgiant į ilgametę bylinėjimosi patirtį,
-                    visada pirmiausiai pasiūlysime bandyti išspręsti visus ginčus ir bylas taikiai (jei tai įmanoma ir kliento interesai iš
-                     esmės nenukentės) bei suteiksime visas būtinas teisines paslaugas bandant taikiai išspręsti/sureguliuoti kilusį ginčą.
-
-                  Pagrindinis tikslas, kurio siekiame atstovaudami bylose bei kituose ginčų procesuose: didžiausia nauda klientui
-                   kuo mažesnėmis kliento sąnaudomis.
+                    pareiškimus ir kt.).
                 </p>
               </div>
               <div className="grid-item-paslaugos">
                 <img src={services} alt="services" className="services" height="100%" width= "100%" object-fit="contain"/>
                 <p className="grid-item-paslaugos-title">KITOS TEISINĖS PASLAUGOS</p>
                 <p className="grid-item-paslaugos-text">                
-                  ♦ Konsultuojame baudžiamosios teisės klausimais, giname bei atstovaujame baudžiamose bylose
-                  ♦ Konsultuojame darbuotojus ir darbdavius darbo teisės klausimais, atstovaujame darbo ginčuose 
-                  ir bylose, kylančiose iš darbo teisinių santykių♦ Konsultuojame draudėjus ir draudikus draudimo 
-                  teisinių santykių klausimais, atstovaujame draudimo ginčuose ir bylose♦ Teikiame konsultacijas 
-                  mokesčių klausimais, atstovaujame mokestiniuose ginčuose♦ Konsultuojame paveldėjimo klausimais, 
-                  rengiame būtinus dokumentus, pateikiame dokumentų (testamentų, paveldėjimo teisės liudijimų ir kt.) 
-                  teisinį įvertinimą, atstovaujame palikimo priėmimo (paveldėjimo) įforminimo procese, o taip pat (prireikus) – 
-                  tokio pobūdžio bylose teisme♦ Konsultuojame vartotojų teisių apsaugos ir gynimo klausimais, atstovaujame tokio pobūdžio bylose
+                  ♦ Konsultuojame baudžiamosios teisės klausimais, giname bei atstovaujame baudžiamose bylose<br/>
+                  ♦ Konsultuojame darbuotojus ir darbdavius darbo teisės klausimais, atstovaujame darbo ginčuose <br/>
+                  ir bylose, kylančiose iš darbo teisinių santykių<br/>
+                  ♦ Konsultuojame draudėjus ir draudikus draudimo 
+                  teisinių santykių klausimais, atstovaujame draudimo ginčuose ir bylose<br/>
+                  ♦ Teikiame konsultacijas 
+                  mokesčių klausimais, atstovaujame mokestiniuose ginčuose
                 </p>
               </div>
             </div>
           </div>
           <div className="apie-block">
             <img src={lawbackground} alt="lawbackground" className="lawbackground" height="100%" width= "100%"/>
-            <p className="info">
-              <h1>Raimondas Kalverš</h1> <br/>
+            <div className="info hide-on-resize">
+              <h2>Raimondas Kalverš</h2> <br/>
             
               Lietuvos archyvų departamentas prie Lietuvos Respublikos Vyriausybės,<br/> teisininkas 1994 m. - 1995 m.<br/>
               <br/>
@@ -202,10 +187,9 @@ function App() {
 
                <br/>
                <br/>
-               <br/>
                
 
-              <h1>Jaunius Svetickas</h1>
+              <h2>Jaunius Svetickas</h2> <br/>
               Teisinė praktika nuo 1995 m.
 
               Advokatas nuo 2003 m.<br/>
@@ -213,10 +197,10 @@ function App() {
               
 
               Specializacijos: verslas ir įmonių veikla, šeimos teisė, <br/>sutarčių teisė, teisminiai ginčai, kitos kontoros veiklos sritys
-            </p>
+            </div>
 
 
-            <p className="kontaktai">
+            <div className="kontaktai">
               <h1>Kontaktai</h1>
               Advokatas Raimondas Kalverš<br/>
               tel. (+370 631) 09888<br/>
@@ -227,7 +211,12 @@ function App() {
               Advokatas Jaunius Svetickas<br/>
               tel. (+370 685) 45062<br/>
               el. p.: jaunius@akks.lt<br/>
-            </p>
+
+              <br/>
+              <br/>
+              <b>Žalgirio g. 88-609,<br/>
+              LT-09303 Vilnius</b>
+            </div>
           </div>
         </div>
     </div>

@@ -1,48 +1,57 @@
+* {
+  box-sizing: border-box;
+}
 .App {
   background-color: rgb(78, 73, 73);
   overflow: hidden;
   position: relative;
-  font-family: monospace;
+  font-family: 'Times New Roman', serif;
   background-color: black;
 }
 .body {
   position: relative;
-  margin-top: 2rem;
   margin-bottom: -1em;
+  margin-top: 1em;
   justify-content: center;
   align-items: center;
 }
 .background {
   opacity: 0.4;
-  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
   height: auto;
   position: fixed;
  }
+ .btn-light {
+  position: absolute;
+  top: 0;
+  right: 5.7em;
+ }
  .apie-block {
   position: relative;
-  color: black;
-  font-size: 14px;
+  color: rgb(22, 27, 70);
+  font-size: 1.2vw;
+  height: 60em;
 }
 .apie-block .info {
   position: absolute;
-  top: 180px;
-  left: 110px;
+  top: 18%;
+  left: 5.2em;
   text-align: left;
 }
 .apie-block .kontaktai {
   position: absolute;
-  top: 180px;
-  right: 100px;
+  top: 18%;
+  right: 5.2em;
   text-align: right;
+  font-size: 1.25vw;
 }
 .grid-container-paslaugos {
   display: grid;
-  grid-template-columns: repeat(5, 25em);
-  grid-template-rows: repeat(5, 16em);
-  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 20em));
+  grid-template-rows: repeat(3, 12em);
+  grid-gap: 1em;
   justify-content: center;
 }
 .grid-item-paslaugos {
@@ -58,7 +67,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 16px;
+  font-size: 1em;
   font-weight: bold;
 }
 .grid-item-paslaugos-text {
@@ -67,7 +76,7 @@
   left: 50%;
   right: -40%;
   transform: translate(-50%, -50%);
-  font-size: 12px;
+  font-size: 0.75em;
   display: none;
 }
 div.grid-item-paslaugos:hover {
@@ -84,41 +93,64 @@ div.grid-item-paslaugos:hover .grid-item-paslaugos-title {
 }
 .logo-section {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 20% 75%;
   margin: auto;
-  width: 18rem;
-  padding: 10px;
+  width: 35%;
+  padding: 0.3em;
   background-color: white;
-  font-size: 22px;
+  opacity: 0.95;
+  font-size: 1.85vw;
   justify-items: center; /* adjusted */
   justify-content: center;
-  border-radius: 30px;
+  align-items: center;
+  border-radius:0.4em;
+  line-height: 1em;
+  font-weight: bold;
+  text-align: right;
+  cursor: pointer;
+  object-fit: cover;
+}
+@media only screen and (max-device-width: 1000px) {
+  .btn-light {visibility: hidden;}
+  .hide-on-resize {visibility: hidden;}
+  .logo-section {grid-template-columns: 100% 0;}
+  .apie-block .kontaktai { 
+      font-size: 4vw;
+      top: 18%;
+      left: 20%;
+      right: 20%;
+      text-align: center;
+      background-color: white;
+  }
+  .apie-block {
+    height: 120em;
+  }
 }
 .responsive-image {
   width: 100%;
-  max-width: 100px;
+  max-width: 6em;
   height: auto;
 }
 .info-block {
-  height: 500px;
+  height: 32em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 8rem;
   width: 100%;
 }
 .info-block-text p{
-  font-size: 24px;
+  font-size: 1.5em;
   line-height: 1.5;
   text-align: center;
   color: white;
 }
 .paslaugos-block {
-  height: 500px;
+  height: 100%;
   background-color: white;
   margin-left: auto;
   margin-right: auto;
   margin-top: 8rem;
   width: 100%;
-  padding-top: 120px;
+  padding-top: 6em;
   text-align: center;
 }
