@@ -35,13 +35,13 @@ function App() {
           <ButtonScroll className="button"/>
           <div className="info-block">
             <div className="info-block-text">
-              <p style={{fontSize:"2.25em", wordSpacing: "0.3em", fontWeight:"bold"}}>
+              <p className="top">
                 ____________________________<br/><br/>  
                 ADVOKATAI RAIMONDAS KALVERŠ IR <br/> JAUNIUS SVETICKAS TEIKIA <br/> TEISINES PASLAUGAS<br/> 
                 ____________________________
               </p>
 
-              <p className="hide-on-resize" style={{marginTop:"7em", marginBottom:"-4em"}}>
+              <p className="hide-on-resize" style={{marginTop:"8vw", marginBottom:"-8.5vw"}}>
                 Turite teisinių klausimų? <br/>
                 Turėdami virš <b>20 metų</b> patirties mes Jums atsakysime į<br/> rūpimus klausimus ir padėsime išspręsti teisines problemas.
               </p>
@@ -49,6 +49,17 @@ function App() {
           </div>
           <div className="paslaugos-block">
             <div className="grid-container-paslaugos">
+            <div className="grid-item-paslaugos">
+                <img src={construction} alt="construction" className="construction" height="100%" width= "100%" object-fit="contain"/>
+                <p className="grid-item-paslaugos-title">STATYBŲ TEISĖ</p>
+                <p className="grid-item-paslaugos-text">
+                  
+                     Konsultuojame visais būtinais pasirengimo statybai, projektavimo, statybos proceso, priežiūros, kokybės, atitikties,
+                      garantijų, statinių naudojimo teisiniais klausimais, rengiame sutarčių ir kitų reikiamų teisinių dokumentų projektus,
+                       pateikiame dokumentų teisinį įvertinimą, prireikus – atstovaujame ginčuose ir bylose, kylančiose iš statybos teisinių
+                        santykių visus statybos proceso dalyvius, statinių naudotojus.
+                </p>
+              </div>
               <div className="grid-item-paslaugos">
                 <img src={business} alt="business" className="business" height="100%" width= "100%" object-fit="contain"/>
                 <p className="grid-item-paslaugos-title">VERSLO ĮMONIŲ IR KOMERCINĖ TEISĖ</p>
@@ -60,28 +71,6 @@ function App() {
                         paslaugas steigiant, įsigijant, jungiant, atidalijant, pertvarkant, ar likviduojant įmones, įsigyjant, ar
                          perleidžiant akcijas (įmonių kapitalo dalis, pajus), keičiant įmonės valdymo struktūrą, steigimo dokumentus,
                           buveinės vietą, pavadinimą, valdymo organus, ar atskirus jų narius.
-                </p>
-              </div>
-              <div className="grid-item-paslaugos">
-                <img src={bankrupt} alt="bankrupt" className="bankrupt" height="100%" width= "100%" object-fit="contain"  />
-                <p className="grid-item-paslaugos-title">BANKROTAS</p>
-                <p className="grid-item-paslaugos-text">
-                  Prireikus, patarsime visais teisiniais klausimais, kilusiais dėl įmonės nemokumo bei suteiksime visas būtinas
-                   teisines paslaugas teikiant pareiškimą dėl įmonės bankroto, bankroto bylos iškėlimo ir nagrinėjimo procese.
-
-                  Turime reikiamos patirties bei galime atstovauti bankroto bylos iškėlimo ir nagrinėjimo procese tiek pačią 
-                  bankrutuojančią įmonę, tiek įmonės kreditorius, tiek bankrutuojančios įmonės administratorių.
-                </p>
-              </div>
-              <div className="grid-item-paslaugos">
-                <img src={construction} alt="construction" className="construction" height="100%" width= "100%" object-fit="contain"/>
-                <p className="grid-item-paslaugos-title">STATYBŲ TEISĖ</p>
-                <p className="grid-item-paslaugos-text">
-                  
-                     Konsultuojame visais būtinais pasirengimo statybai, projektavimo, statybos proceso, priežiūros, kokybės, atitikties,
-                      garantijų, statinių naudojimo teisiniais klausimais, rengiame sutarčių ir kitų reikiamų teisinių dokumentų projektus,
-                       pateikiame dokumentų teisinį įvertinimą, prireikus – atstovaujame ginčuose ir bylose, kylančiose iš statybos teisinių
-                        santykių visus statybos proceso dalyvius, statinių naudotojus.
                 </p>
               </div>
               <div className="grid-item-paslaugos">
@@ -103,6 +92,17 @@ function App() {
                    uzufruktas, įkeitimas, hipoteka, areštas ir kt.) ir kitais nuosavybės bei daiktinės teisės klausimais.
 
                   Prireikus, atstovaujame teisme ir kitose ginčų nagrinėjimo institucijose tokio pobūdžio bylose.
+                </p>
+              </div>
+              <div className="grid-item-paslaugos">
+                <img src={bankrupt} alt="bankrupt" className="bankrupt" height="100%" width= "100%" object-fit="contain"  />
+                <p className="grid-item-paslaugos-title">BANKROTAS</p>
+                <p className="grid-item-paslaugos-text">
+                  Prireikus, patarsime visais teisiniais klausimais, kilusiais dėl įmonės nemokumo bei suteiksime visas būtinas
+                   teisines paslaugas teikiant pareiškimą dėl įmonės bankroto, bankroto bylos iškėlimo ir nagrinėjimo procese.
+
+                  Turime reikiamos patirties bei galime atstovauti bankroto bylos iškėlimo ir nagrinėjimo procese tiek pačią 
+                  bankrutuojančią įmonę, tiek įmonės kreditorius, tiek bankrutuojančios įmonės administratorių.
                 </p>
               </div>
               <div className="grid-item-paslaugos">

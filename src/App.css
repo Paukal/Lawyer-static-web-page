@@ -31,13 +31,13 @@
  .apie-block {
   position: relative;
   color: rgb(22, 27, 70);
-  font-size: 1.2vw;
-  height: 60em;
+  font-size: 1vw;
+  height: 58vw;
 }
 .apie-block .info {
   position: absolute;
-  top: 18%;
-  left: 5.2em;
+  top: 19%;
+  left: 6.3vw;
   text-align: left;
 }
 .apie-block .kontaktai {
@@ -96,7 +96,7 @@ div.grid-item-paslaugos:hover .grid-item-paslaugos-title {
   grid-template-columns: 20% 75%;
   margin: auto;
   width: 35%;
-  padding: 0.3em;
+  padding: 0.4vw;
   background-color: white;
   opacity: 0.95;
   font-size: 1.85vw;
@@ -115,8 +115,8 @@ div.grid-item-paslaugos:hover .grid-item-paslaugos-title {
   .hide-on-resize {visibility: hidden;}
   .logo-section {
     grid-template-columns: 100% 0;
-    width: 70%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
     margin-bottom: 0;
   }
   .apie-block .kontaktai { 
@@ -129,42 +129,50 @@ div.grid-item-paslaugos:hover .grid-item-paslaugos-title {
   }
   .apie-block {
     height: 120em;
+    margin-top: -14em;
+    margin-bottom: -7em;
+    background-color: white;
   }
-  .info-block-text {
-    margin-top: -7em;
-    font-size: 2vw;
-    width: 95%;
-    margin-left: 2%;
-    margin-right: 2%;
-    height: 46em;
-    margin-bottom: -30em;
+  .apie-block .lawbackground {
+    visibility: hidden;
+  }
+  .info-block-text .top{
+    margin-bottom: -1em;
+  }
+  .grid-container-paslaugos {
+    padding-bottom: 1.4em;
   }
 }
 .logo {
   width: 100%;
-  max-width: 16em;
+  max-width: 20vw;
   height: auto;
 }
 .info-block {
   height: auto;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 8rem;
+  margin-top: 7.5vw;
   width: 100%;
 }
 .info-block-text p{
-  font-size: 1.5em;
+  font-size: 1.2vw;
   line-height: 1.5;
   text-align: center;
   color: white;
+}
+.info-block-text .top{
+  font-size: calc(10px + 1.1vw);
+  word-spacing: 0.3vw;
+  font-weight: bold;
 }
 .paslaugos-block {
   height: 100%;
   background-color: white;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 8rem;
+  margin-top: 9.5vw;
   width: 100%;
-  padding-top: 6em;
+  padding-top: 6vw;
   text-align: center;
 }
